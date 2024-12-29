@@ -2,15 +2,16 @@
 import "./globals.css";
 import { AntdRegistry } from '@ant-design/nextjs-registry';
 import AppLayaout from "./components/AppLayout";
-import { QueryClientProvider, useQueryClient } from "@tanstack/react-query";
+import { QueryClientProvider, QueryClient } from "@tanstack/react-query";
+
+const queryClient = new QueryClient();
 
 export default function RootLayout({ children }) {
-  const useQueryClient = new useQueryClient();
 
   return (
     <html lang="en">
       <body>
-        <QueryClientProvider client={useQueryClient}>
+        <QueryClientProvider client={queryClient}>
           <AntdRegistry>
             <AppLayaout>
               {children}
