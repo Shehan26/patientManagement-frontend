@@ -27,7 +27,7 @@ const AppLayaout = ({ children }) => {
           alignItems: 'center',
         }}
       >
-        <div className="demo-logo" />
+        <div className='text-white text-lg mr-6'>Patient Management System</div>
         <Menu
           theme="dark"
           mode="horizontal"
