@@ -11,8 +11,8 @@ pipeline {
             steps {
                 script {
                     withDockerRegistry(credentialsId: 'dockerhub_id') {
-                        sh "docker build -t shehanmadushanka2622/patient-management-frontend:1.0 ."
-                        sh "docker push shehanmadushanka2622/patient-management-frontend:1.0"
+                        bat "docker build -t shehanmadushanka2622/patient-management-frontend:1.0 ."
+                        bat "docker push shehanmadushanka2622/patient-management-frontend:1.0"
                     }
                 }
             }
